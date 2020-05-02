@@ -1,0 +1,38 @@
+.btn {
+  background: unset;
+  background-color: 'black';
+  color: #eee;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+  border: solid var(--secondary) 2px;
+  padding: 10px;
+  line-height: normal;
+  border-radius: 2px;
+  margin: 10px;
+  outline: none;
+  -webkit-animation: unFocus 0.5s forwards;
+}
+.btn:hover {
+  animation: focus 0.5s forwards;
+} 
+@keyframes focus {
+  0% {
+    transform: scale(1) translateY(0);
+    border-color: var(--secondary);
+  }
+  100% {
+    transform: scale(1) translateY(-2px);
+    border-color: var(--primary);
+  }
+}
+@keyframes unFocus {
+  0% {
+    transform: scale(1) translateY(-2px);
+    border-color: var(--primary);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    border-color: var(--secondary);
+  }
+}
