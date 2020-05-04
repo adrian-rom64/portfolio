@@ -4,19 +4,24 @@ import Button from '../Components/Button'
 import colors from '../Variables/colors'
 import { goto } from '../utils'
 
+const convertToSpans = (str: string): Array<JSX.Element> => {
+  return str.split('').map((letter, index) => <span key={index} className="letter">{letter}</span>)
+}
+
 const Splash: React.FC = () => {
   return (
     <section id="splash" style={{ backgroundImage: `url(${BackgroundImage})` }}>
       <div className="splash-text">
         <React.Fragment>
-          <span>Hi, my name is </span>
-          <span style={{ color: colors.primary }}>Adrian Romanowski</span>
-          <span style={{ color: colors.secondary }}>.</span>
+          <span style={{ color: colors.secondary }}>{convertToSpans('Hi')}</span>
+          <span>{convertToSpans(', my name is ')}</span>
+          <span style={{ color: colors.primary }}>{convertToSpans('Chris Hemsworth')}</span>
+          <span style={{ color: colors.secondary }}>{convertToSpans('.')}</span>
         </React.Fragment>
         <br />
         <React.Fragment>
-          <span>I&apos;m a fullstack developer</span>
-          <span style={{ color: colors.secondary }}>.</span>
+          <span>{convertToSpans('I\'m a fullstack developer')}</span>
+          <span style={{ color: colors.secondary }}>{convertToSpans('.')}</span>
         </React.Fragment>
         <br />
         <div className="splash-buttons">

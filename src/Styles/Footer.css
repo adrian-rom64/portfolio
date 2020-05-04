@@ -1,0 +1,16 @@
+#footer {
+  background-color: #111;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: solid var(--secondary) 4px;
+}
+@media only screen and (max-width: 800px) {
+  #footer {
+    flex-direction: column-reverse;
+  }
+  #footer > div {
+    margin: 20px;
+  }
+}

@@ -11,6 +11,9 @@
   justify-content: center;
   border-bottom: solid var(--secondary) 4px;
 }
+.letter:hover {
+  color: var(--secondary);
+}
 .splash-text {
   font-size: 40px;
   color: #eee;
@@ -20,6 +23,7 @@
   margin-right: 200px;
   cursor: unset;
   padding: 10px;
+  letter-spacing: 0.5px;
   animation: enterFromLeft 1.5s forwards;
 }
 .splash-buttons {

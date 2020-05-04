@@ -1,0 +1,15 @@
+#contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.form {
+  max-width: 600px;
+  min-width: 250px;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}

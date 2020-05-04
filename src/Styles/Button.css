@@ -11,7 +11,8 @@
   border-radius: 2px;
   margin: 10px;
   outline: none;
-  -webkit-animation: unFocus 0.5s forwards;
+  animation: unFocus 0.5s forwards;
+  width: 100px;
 }
 .btn:hover {
   animation: focus 0.5s forwards;

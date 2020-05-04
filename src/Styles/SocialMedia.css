@@ -1,0 +1,31 @@
+.social {
+  height: 50px !important;
+  width: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+}
+.social svg {
+  height: 200px;
+}
+.social:hover {
+  cursor: pointer;
+}
+.social img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+.stackoverflow:hover {
+  background-color: #f48024;
+}
+.twitter:hover {
+  background-color: #00acee;
+}
+.linkedin:hover {
+  background-color: #0072b1;
+}
+.github:hover {
+  background-color: #28a745;
+}

@@ -1,32 +1,20 @@
 import React from 'react'
+import Scroll from './Components/Scroll'
 import Splash from './Sections/Splash'
 import About from './Sections/About'
+import Projects from './Sections/Projects'
+import Contact from './Sections/Contact'
+import Footer from './Sections/Footer'
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Scroll />
       <Splash />
       <About />
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
-      <h1>content</h1>
-      <p>gdfgdf gdf dg df gdfg dfg dfg dfg dfg dfg dfg dfg df gdfg dfg dg</p>
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   )
 }
