@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Skills from '../Components/Skills'
-// TODO Rewrite those to make the app faster
 // TODO start lazy loading
-import { makeStyles, Box, Slide, createStyles, Theme } from '@material-ui/core'
+import makeStyles from '@material-ui/core/styles/makeStyles'
+import Box from '@material-ui/core/Box'
+import Slide from '@material-ui/core/Slide'
+import createStyles from '@material-ui/core/styles/createStyles'
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import Bio from '../Components/Bio'
 import { onScroll } from '../utils'
 

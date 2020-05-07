@@ -1,6 +1,9 @@
 import React from 'react'
 import Socials from '../Components/Socials'
-import { Typography, Link, makeStyles, Box } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import Box from '@material-ui/core/Box'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles({
   section: {

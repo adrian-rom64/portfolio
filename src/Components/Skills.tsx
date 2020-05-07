@@ -1,5 +1,7 @@
 import React from 'react'
-import { Box, makeStyles, Typography } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import makeStyles from '@material-ui/core/styles/makeStyles'
+import Typography from '@material-ui/core/Typography'
 import Skill from './Skill'
 
 const useStyles = makeStyles({

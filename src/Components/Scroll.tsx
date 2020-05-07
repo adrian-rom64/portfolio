@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Box, makeStyles, Grow } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import Grow from '@material-ui/core/Grow'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 import { goto } from '../utils'
-import { ArrowUpward } from '@material-ui/icons'
+import ArrowUpward from '@material-ui/icons/ArrowUpward'
 
 const useStyles = makeStyles({
   marker: {

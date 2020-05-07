@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ProjectCover from '../Components/ProjectCover'
-import { Box, Typography, makeStyles } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 import projects from '../Variables/projects'
 import { onScroll } from '../utils'
 

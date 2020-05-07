@@ -3,7 +3,7 @@ import BackgroundImage from '../Assets/bg.jpg'
 import Button from '../Components/Button'
 import colors from '../Variables/colors'
 import { goto } from '../utils'
-import { Slide } from '@material-ui/core'
+import Slide from '@material-ui/core/Slide'
 
 const convertToSpans = (str: string): Array<JSX.Element> => {
   return str.split('').map((letter, index) => <span key={index} className="letter">{letter}</span>)
