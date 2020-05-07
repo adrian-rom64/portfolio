@@ -1,45 +1,67 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import { makeStyles, CardActions } from '@material-ui/core'
+import { makeStyles, CardActions, Zoom } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import Grow from '@material-ui/core/Grow'
 
 const useStyles = makeStyles({
   root: {
     display: 'inline-block',
     minHeight: '300px',
     margin: '10px',
-    width: '300px',
+    width: '280px',
     textAlign: 'left'
   },
   media: {
-    height: 150,
+    height: 140,
     width: '100%'
+  },
+  content: {
+    height: 80
   }
 })
 
-function ProjectCover (): JSX.Element {
+interface ProjectCoverProps {
+  title: string;
+  type: string;
+  desc: string;
+  image: string;
+  links: any;
+  grow: boolean;
+}
+
+function ProjectCover (props: ProjectCoverProps): JSX.Element {
   const classes = useStyles()
 
+  const [visible, setVisible] = useState(false)
+
+  const getImage = (name: string): string => {
+    return `${window.location.origin}/images/${name}`
+  }
+
+  useEffect(() => {
+    if (props.grow) {
+      setTimeout(() => setVisible(true), Math.random() * 1000)
+    }
+  }, [props.grow])
+
   return (
-    <Grow in={true} >
+    <Zoom in={visible} timeout={700}>
       <Card className={classes.root}>
         <CardHeader
-          title="Project"
+          title={props.title}
         />
         <CardMedia
-          image={`https://picsum.photos/300/150?${Math.random()}`}
-          title="hello"
+          image={getImage(props.image)}
+          title={props.title}
           className={classes.media}
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {props.desc}
           </Typography>
         </CardContent>
         <CardActions>
@@ -47,7 +69,7 @@ function ProjectCover (): JSX.Element {
           <Button disabled color="primary" variant="text">Repository</Button>
         </CardActions>
       </Card>
-    </Grow>
+    </Zoom>
   )
 }
 

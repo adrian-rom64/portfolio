@@ -8,32 +8,35 @@ interface SkillProps {
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex'
+    display: 'flex',
+    width: '100%'
   },
   progress: {
     height: 25,
-    width: 300
+    width: '60%'
   },
   label: {
     height: 23,
-    width: 120,
+    width: '30%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     border: 'solid var(--secondary) 1px',
     borderTopLeftRadius: 4,
-    borderBottomLeftRadius: 4
+    borderBottomLeftRadius: 4,
+    minWidth: 80
   },
   value: {
     backgroundColor: 'var(--secondary)',
     height: 25,
-    width: 60,
+    width: '10%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#eee',
     borderTopRightRadius: 4,
-    borderBottomRightRadius: 4
+    borderBottomRightRadius: 4,
+    minWidth: 50
   }
 })
 
@@ -43,7 +46,7 @@ function Skill (props: SkillProps): JSX.Element {
   return (
     <Box className={styles.root}>
       <Box className={styles.label}>
-        <Typography variant="body1">
+        <Typography variant="caption">
           {props.label}
         </Typography>
       </Box>
@@ -55,8 +58,8 @@ function Skill (props: SkillProps): JSX.Element {
 
       />
       <Box className={styles.value}>
-        <Typography variant="body1">
-          {props.progress} %
+        <Typography variant="caption">
+          {props.progress}%
         </Typography>
       </Box>
     </Box>

@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Swal from 'sweetalert2'
+import { Typography } from '@material-ui/core'
 
 const FORM_URL = 'https://formspree.io/xoqjaazw'
 
@@ -86,7 +87,9 @@ const Contact: React.FC = () => {
   return (
     <section id="contact">
       <div className="form">
-        <h1>Get in touch</h1>
+        <Typography variant="h4" gutterBottom>
+          Get in touch
+        </Typography>
         <TextField
           label="Your message?"
           variant="outlined"
