@@ -1,15 +1,17 @@
 #splash {
   height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: black;
-  background-attachment: fixed;
+  background-color: #131315;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: solid var(--secondary) 4px;
+}
+#splash-image {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  top: 0;
 }
 .letter:hover {
   color: var(--secondary);
@@ -25,6 +27,7 @@
   padding: 10px;
   letter-spacing: 0.5px;
   animation: enterFromLeft 1.5s forwards;
+  background-color: #131315;
 }
 .splash-buttons {
   margin-top: 50px;

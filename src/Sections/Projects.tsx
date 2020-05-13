@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ProjectCover from '../Components/ProjectCover'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import projects from '../Variables/projects'
-import { onScroll } from '../utils'
 
 const useStyles = makeStyles({
   root: {
@@ -17,27 +16,23 @@ const useStyles = makeStyles({
   },
   container: {
     maxWidth: 1200
+  },
+  text: {
+    fontSize: 32,
+    marginBottom: 30
   }
 })
 
 const Projects: React.FC = () => {
   const styles = useStyles()
 
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    onScroll('projects', () => {
-      if (!show) setShow(true)
-    })
-  }, [])
-
-  const mapping = projects.map((project, index) => <ProjectCover key={index} grow={show} {...project} />)
+  const mapping = projects.map((project, index) => <ProjectCover key={index} {...project} />)
 
   return (
     <Box id="projects" className={styles.root}>
-      <Typography variant="h4" gutterBottom>
+      <Box className={styles.text}>
         Projects that I worked on
-      </Typography>
+      </Box>
       <Box className={styles.container}>
         {mapping}
       </Box>

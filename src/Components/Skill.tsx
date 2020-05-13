@@ -1,7 +1,6 @@
 import React from 'react'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 interface SkillProps {
@@ -16,30 +15,30 @@ const useStyles = makeStyles({
   },
   progress: {
     height: 25,
-    width: '60%'
+    width: '100%'
   },
   label: {
     height: 23,
-    width: '30%',
+    width: 180,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: 'solid var(--secondary) 1px',
+    border: 'solid var(--primary) 1px',
     borderTopLeftRadius: 4,
     borderBottomLeftRadius: 4,
-    minWidth: 80
+    fontSize: 14
   },
   value: {
-    backgroundColor: 'var(--secondary)',
+    backgroundColor: 'var(--primary)',
     height: 25,
-    width: '10%',
+    width: 80,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#eee',
     borderTopRightRadius: 4,
     borderBottomRightRadius: 4,
-    minWidth: 50
+    fontSize: 14
   }
 })
 
@@ -49,21 +48,15 @@ function Skill (props: SkillProps): JSX.Element {
   return (
     <Box className={styles.root}>
       <Box className={styles.label}>
-        <Typography variant="caption">
-          {props.label}
-        </Typography>
+        {props.label}
       </Box>
       <LinearProgress
         value={props.progress}
-        variant="buffer"
+        variant="determinate"
         className={styles.progress}
-        valueBuffer={props.progress}
-
       />
       <Box className={styles.value}>
-        <Typography variant="caption">
-          {props.progress}%
-        </Typography>
+        {props.progress}%
       </Box>
     </Box>
   )

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Skills from '../Components/Skills'
-// TODO start lazy loading
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Box from '@material-ui/core/Box'
 import Slide from '@material-ui/core/Slide'

@@ -19,10 +19,6 @@ const About: React.FC = () => {
   return (
     <section id="footer">
       <Typography variant="subtitle1" align="left" className={styles.section}>
-        Design inspired by this <Link target="_blank" rel="noopener noreferrer" href="http://findmatthew.com">portfolio</Link>
-        <br />
-        Lading page image by <Link target="_blank" rel="noopener noreferrer" href="https://unsplash.com/@the_real_napster">Dominik Lange</Link>
-        <br />
         Adrian Romanowski &copy; 2020
       </Typography>
       <Typography variant="subtitle1" className={styles.section}>

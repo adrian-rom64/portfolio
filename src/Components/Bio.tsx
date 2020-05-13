@@ -3,6 +3,7 @@ import Box from '@material-ui/core/Box'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
+import Picture from '../Assets/avatar.jpg'
 
 const useStyles = makeStyles({
   root: {
@@ -13,12 +14,13 @@ const useStyles = makeStyles({
     minWidth: 250
   },
   photo: {
-    backgroundImage: 'url(https://picsum.photos/250)',
+    backgroundImage: `url(${Picture})`,
+    backgroundSize: 'contain',
     width: 250,
     height: 250,
     borderRadius: 125,
     margin: 20,
-    border: 'solid var(--secondary) 4px'
+    border: 'solid var(--primary) 4px'
   },
   text: {
     textAlign: 'justify',
@@ -27,11 +29,11 @@ const useStyles = makeStyles({
   }
 })
 
-function Bio (props: any): JSX.Element {
+function Bio (): JSX.Element {
   const styles = useStyles()
 
   return (
-    <Box className={styles.root} style={{ ...props.style }}>
+    <Box className={styles.root}>
       <Box className={styles.photo} />
       <Typography variant="h5" gutterBottom>
         That&apos;s me

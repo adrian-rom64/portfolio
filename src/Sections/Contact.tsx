@@ -3,11 +3,35 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Swal from 'sweetalert2'
-import Typography from '@material-ui/core/Typography'
+import makeStyles from '@material-ui/styles/makeStyles'
+import Box from '@material-ui/core/Box'
 
 const FORM_URL = 'https://formspree.io/xoqjaazw'
 
+const useStyles = makeStyles({
+  root: {
+    paddingBottom: 50,
+    paddingTop: 50,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white'
+  },
+  form: {
+    maxWidth: 600,
+    width: '100%',
+    padding: 10,
+    textAlign: 'left'
+  },
+  text: {
+    fontSize: 30,
+    marginBottom: 20
+  }
+})
+
 const Contact: React.FC = () => {
+  const styles = useStyles()
+
   const [message, setMessage] = useState('')
   const [messageTouched, setMessageTouched] = useState(false)
 
@@ -85,11 +109,11 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <section id="contact">
-      <div className="form">
-        <Typography variant="h4" gutterBottom>
+    <Box id="contact" className={styles.root}>
+      <Box className={styles.form}>
+        <Box className={styles.text}>
           Get in touch
-        </Typography>
+        </Box>
         <TextField
           label="Your message?"
           variant="outlined"
@@ -118,12 +142,12 @@ const Contact: React.FC = () => {
           color={loading ? 'default' : 'primary'}
           variant="contained"
           onClick={submitHandler}
-          style={{ width: '80px' }}
+          style={{ width: '80px', color: 'white' }}
         >
           {buttonContent}
         </Button>
-      </div>
-    </section>
+      </Box>
+    </Box>
   )
 }
 

@@ -1,4 +1,8 @@
+import lightBlue from '@material-ui/core/colors/lightBlue'
+import pink from '@material-ui/core/colors/pink'
+
 export default {
-  primary: '#f50057',
-  secondary: '#3f51b5'
+  primary: lightBlue[500],
+  secondary: pink.A400,
+  splashBackground: '#131315'
 }

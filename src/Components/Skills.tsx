@@ -1,7 +1,6 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import Typography from '@material-ui/core/Typography'
 import Skill from './Skill'
 
 const useStyles = makeStyles({
@@ -17,8 +16,14 @@ const useStyles = makeStyles({
     justifyContent: 'space-evenly',
     height: 360
   },
-  text: {
-    marginTop: 20
+  title: {
+    fontSize: 30,
+    marginBottom: 15
+  },
+  disclaimer: {
+    fontSize: 12,
+    marginTop: 5,
+    color: '#666'
   }
 })
 
@@ -31,9 +36,9 @@ function Skills (props: SkillsProps): JSX.Element {
 
   return (
     <Box className={styles.root} style={{ ...props.style }}>
-      <Typography variant="h4" gutterBottom>
-        My Top Skills
-      </Typography>
+      <Box className={styles.title}>
+        My top skills
+      </Box>
       <Box className={styles.container}>
         <Skill label="Javascript" progress={80} />
         <Skill label="Linux" progress={80} />
@@ -46,9 +51,9 @@ function Skills (props: SkillsProps): JSX.Element {
         <Skill label="Typescript" progress={40} />
         <Skill label="MaterialUI" progress={30} />
       </Box>
-      <Typography variant="caption" color="textSecondary" className={styles.text}>
+      <Box className={styles.disclaimer}>
         *This is very subjective though 😀
-      </Typography>
+      </Box>
     </Box>
   )
 }

@@ -1,20 +1,25 @@
-import React from 'react'
-import Scroll from './Components/Scroll'
+import React, { Suspense } from 'react'
 import Splash from './Sections/Splash'
-import About from './Sections/About'
-import Projects from './Sections/Projects'
-import Contact from './Sections/Contact'
-import Footer from './Sections/Footer'
+import Scroll from './Components/Scroll'
+
+const About = React.lazy(() => import('./Sections/About'))
+const Traits = React.lazy(() => import('./Sections/Traits'))
+const Projects = React.lazy(() => import('./Sections/Projects'))
+const Contact = React.lazy(() => import('./Sections/Contact'))
+const Footer = React.lazy(() => import('./Sections/Footer'))
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Scroll />
       <Splash />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<span>Loading...</span>}>
+        <About />
+        <Traits />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   )
 }

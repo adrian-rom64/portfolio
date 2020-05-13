@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-top: solid var(--secondary) 4px;
+  border-top: solid var(--primary) 4px;
 }
 @media only screen and (max-width: 800px) {
   #footer {
